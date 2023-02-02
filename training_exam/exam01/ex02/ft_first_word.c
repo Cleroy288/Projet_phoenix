@@ -45,26 +45,45 @@ void	ft_putstr( char *str)
 	write (1, str, ft_strlen(str));
 }
 
-int	main(int argc, char **argv)
+int	is_char(char c)
 {
-	int	i = ft_strlen(argv[1]);
-	int	j = ft_strlen(argv[2]);
-	if (argc == 3)
-	{
-		ft_putstr(argv[1]);// 1)
-		write (1, "\n", 1);
-		write (1, argv[2], j);// 2
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	else
+		return (0);
+}
+
+void	adelle(char *str)
+{
+	int	i = 0;
+
+	while (is_char(str[i]) == 0)
+		i++;
+	while (is_char(str[i]) == 1)
+	{	
+		write(1, &str[i], 1);
+		i++;
 	}
 }
 
+int	main(int argc, char **argv)
+{
+	if (argc == 2)
+	{
+		adelle(argv[1]);
+		write (1, "\n", 1);
+	}
+	else
+		write (1, "\n", 1);
+}
+
 /*
-il y a 2 facons de faire ici,
+on crée la fonction is_char qui vérifie si le caractère sur le quel on est est un caractère alphabétique
 
-1 ) on crée une fonction putstr et on affiche argv[1].
-	-putstr utilise strlen pour définir une longueur dans write, 1 désigne la sortie standart, et str 
-	désigne la chaine de caractère donnée.
+sur base de celle-ci on vas dire a adelle de passer les cractères qui ne correpsondent pas a cette 
+condition.
 
-2 ) juste on implémente argv[1] avec write.
-	-meme mécanisme que précédemment , simplement celle ci es directement fait dans le main.
+On incrémente pas après la seconde boucle while, donc le programme s'arrete 
+après avoi récris le premier mot.
 
 */
