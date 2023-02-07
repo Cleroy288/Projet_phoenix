@@ -1,0 +1,8 @@
+Ce script est en fait un ensemble de commandes Shell exécutées par le terminal. Il s'agit d'une commande de compilation en C pour créer une bibliothèque de fonctions.
+
+La première commande "gcc" est un compilateur en C qui compile les fichiers "ft_putchar.c", "ft_swap.c", "ft_putstr.c", "ft_strlen.c" et "ft_strcmp.c".
+Les options "Wall", "Wextra", "Werror" sont des options de compilation qui ajoutent des vérifications supplémentaires à la compilation. "Wall" affiche tous les avertissements, "Wextra" affiche des avertissements supplémentaires et "Werror" traite les avertissements comme des erreurs.
+L'option "-c" signifie que le compilateur ne doit pas générer de fichier exécutable, mais uniquement des fichiers objets.
+La seconde commande "ar rc" est utilisée pour créer une archive (bibliothèque) statique. "ar" est un outil pour gérer les archives, "rc" signifie "remplacer ou créer".
+Les fichiers objets "*.o" sont ajoutés à la bibliothèque avec le nom "libft.a".
+La dernière commande "rm *.o" supprime tous les fichiers objets.
