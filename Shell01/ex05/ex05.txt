@@ -1,0 +1,13 @@
+"\?$*'MaRViN'*$?\"
+"\?$*'MaRViN'*$?\"
+
+Pour créer ce fichier avec le nom spécifié, vous pouvez utiliser la commande suivante :
+
+echo "42" > "\?$*'MaRViN'*$?\"
+Exemple :
+
+makefile
+Copy code
+$ echo "42" > "\?$*'MaRViN'*$?\"
+$ ls -lRa *MaRV* | cat -e
+-rw---xr-- 1 75355 32015 2 Oct 2 12:21 "\?$*'MaRViN'*$?\"$

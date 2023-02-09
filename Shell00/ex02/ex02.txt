@@ -1,0 +1,30 @@
+Pour créer tous les fichiers et répertoires, nous pouvons utiliser les commandes suivantes:
+
+mkdir test0
+touch test1
+mkdir test2
+touch test3 test4 test5
+ln -s test0 test6
+Pour définir les permissions sur les fichiers et répertoires, nous pouvons utiliser la commande chmod. Par exemple, 
+pour définir les permissions sur test0:
+
+chmod 755 test0
+Nous pouvons également utiliser des valeurs numériques ou des masques symboliques pour définir les permissions. 
+Les permissions sont représentées par trois groupes de trois bits: lire, écrire et exécuter pour l'utilisateur 
+propriétaire, le groupe et les autres utilisateurs.
+
+Lorsque nous exécutons la commande ls -l, nous pouvons voir les permissions sur les fichiers et répertoires. 
+Les heures peuvent varier en fonction de la date et de l'heure actuelle.
+
+Enfin, pour créer le fichier exo2.tar, nous pouvons utiliser la commande tar:
+
+tar -cf exo2.tar *
+Cela créera un fichier exo2.tar qui inclura tous les fichiers et répertoires dans le répertoire actuel.
+
+Vous pouvez changer la date et l'heure d'un fichier en utilisant la commande "touch". Cette commande permet de changer 
+la date et l'heure de modification d'un fichier. Par exemple :
+touch -t YYYYMMDDHHMM filename
+
+où "YYYYMMDDHHMM" est la nouvelle date et l'heure que vous souhaitez définir pour le fichier et "filename" est le nom 
+du fichier.
+

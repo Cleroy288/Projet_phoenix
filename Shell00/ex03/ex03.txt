@@ -1,0 +1,21 @@
+Pour accomplir cet exercice, vous pouvez utiliser la commande suivante :
+
+$ klist > klist.txt
+
+Cette commande affichera tous vos tickets Kerberos en cours et les redirigera vers un fichier nommé "klist.txt".
+
+Vous pouvez également utiliser la commande "klist" sans l'opération de redirection pour simplement afficher les tickets 
+Kerberos en cours. Si vous n'en avez pas encore, vous pouvez en obtenir un en utilisant la commande "kinit".
+
+Kerberos est un protocole de sécurité réseau qui permet de fournir une authentification mutuelle entre deux systèmes 
+informatiques sur un réseau non sécurisé. Les tickets Kerberos sont utilisés pour authentifier les utilisateurs et les 
+applications sans avoir à les authentifier à chaque fois. Les tickets sont délivrés par un serveur d'authentification 
+central appelé Autorité Centrale Kerberos et peuvent être utilisés pour accéder à des services sur le réseau. Les tickets 
+sont cryptés et sont utilisés pour garantir que seuls les utilisateurs authentifiés peuvent accéder aux services.
+
+Attention , les tickets Kerberos ne sont pas des clés SSH. Kerberos est un système d'authentification décentralisé qui 
+utilise des tickets pour permettre aux utilisateurs d'accéder à des ressources protégées sur un réseau informatique. 
+Les tickets sont des objets chiffrés qui incluent des informations d'authentification et de contrôle d'accès, permettant 
+à l'utilisateur d'être identifié et autorisé à accéder à des ressources sans avoir à réentrer constamment ses informations 
+d'identification. Les clés SSH, quant à elles, sont utilisées pour établir des connexions sécurisées entre des ordinateurs 
+pour la communication et la transmission de données.

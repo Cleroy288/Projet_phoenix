@@ -1,0 +1,11 @@
+L'exercice consiste à créer un fichier "b" à partir du fichier "a". Ensuite, vous devez utiliser la commande "diff" pour trouver les différences entre les fichiers "a" et "b", et enfin, utiliser la commande "patch" pour appliquer ces différences sur le fichier "b". Le fichier de sortie "sw.diff" devrait contenir les modifications apportées au fichier "b" pour le faire correspondre au fichier "a".
+
+Vous pouvez utiliser la commande diff pour trouver les différences entre les deux fichiers donnés "a" et "b". La syntaxe générale pour utiliser diff est la suivante :
+
+diff fichier1 fichier2 > fichier_diff
+Cela créera un fichier "fichier_diff" qui contiendra les différences entre les fichiers "fichier1" et "fichier2".
+
+Donc, pour réaliser l'exercice, vous pourriez utiliser la commande suivante :
+
+diff a b > sw.diff
+Cela créera un fichier "sw.diff" qui contiendra les différences entre les fichiers "a" et "b".

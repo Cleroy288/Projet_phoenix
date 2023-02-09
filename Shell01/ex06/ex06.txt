@@ -1,0 +1,26 @@
+ls -l | awk 'NR%2==1'
+
+il y a d'autres moyens de faire cet exercice, par exemple en utilisant la commande "awk" ou "sed". 
+Voici un exemple d'une solution avec "awk":
+
+ls -l | awk 'NR%2==1'
+Ici, la commande "awk" permet de filtrer les lignes impaires (dont le numéro de ligne est impaire) en utilisant la 
+condition NR%2==1.
+
+
+
+///autre commande ; ls -l | sed -n 'p;n'
+
+La commande "ls -l | sed -n 'p;n'" est utilisée pour afficher un ls -l une ligne sur deux, à partir de la première.
+
+La commande "ls -l" est utilisée pour afficher le contenu du répertoire courant sous forme de liste longue (ls -l). Cela 
+inclut les informations sur les fichiers et les répertoires tels que les permissions, la date de modification, le 
+propriétaire, le groupe, la taille, etc.
+
+Le pipe "|" est utilisé pour rediriger la sortie de la commande "ls -l" à la commande "sed". Cela signifie que le résultat 
+de la commande "ls -l" est envoyé à "sed" pour traitement.
+La commande "sed" est un éditeur de flux en ligne qui permet de traiter du texte en entrée et de générer du texte en 
+sortie. Ici, nous utilisons la option "-n" pour n'afficher que ce qui est spécifié avec les expressions régulières et la 
+commande "p;n" qui spécifie de ne tenir compte que de chaque deuxième ligne en exécutant l'impression "p".
+En résumé, cette commande combine la sortie de ls -l avec l'utilisation de sed pour imprimer un ls -l une ligne sur 
+deux, à partir de la première.

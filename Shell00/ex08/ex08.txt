@@ -1,0 +1,14 @@
+Pour effectuer cet exercice, vous pouvez utiliser la commande find avec les options -name et -delete. Vous pouvez trouver 
+les fichiers en utilisant une expression régulière pour spécifier les critères de nom de fichier. La commande serait la 
+suivante :
+
+find . \( -name "*~" -o -name "#*#" \) -delete
+Cette commande démarre la recherche dans le répertoire courant (.), recherche des fichiers qui se terminent par ~ ou qui 
+commencent et se terminent par #, puis les efface avec l'option -delete.
+
+//////autre commande ;
+
+La commande find . -type f \( -name "*" -o -name "#*#" \) -delete -print est une bonne solution pour trouver et supprimer 
+les fichiers correspondant aux critères définis dans l'exercice. La modification consistant à ajouter -print à la fin de 
+la commande va afficher le nom des fichiers trouvés et effacés, ce qui peut être utile pour vérifier que la commande 
+fonctionne correctement.

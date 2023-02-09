@@ -1,0 +1,38 @@
+ifconfig | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'
+
+ifconfig est une commande utilisée pour configurer les interfaces réseau. Elle affiche des informations sur les interfaces 
+réseau actuellement actives sur la machine.
+grep est un utilitaire de recherche de texte qui permet de filtrer les entrées d'un fichier ou d'une sortie standard en 
+fonction d'une expression régulière spécifiée.
+-o est un option pour grep qui permet de ne retourner que les correspondances trouvées, sans le contexte.
+-E est une option pour grep qui active l'utilisation des expressions régulières.
+([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2} est une expression régulière qui décrit le format d'une adresse MAC.
+En conclusion, la commande filtre les informations de ifconfig avec grep pour ne retourner que les adresses MAC 
+correspondantes.
+
+///autre commande ; ifconfig -a link | awk '/ether/ {print $3}'
+
+ifconfig -a link : Cette partie de la commande exécute la commande ifconfig avec les options -a et link, ce qui affiche les
+ informations sur les interfaces réseau, y compris les informations de liaison de chaîne (adresses MAC).
+awk '/ether/ {print $3}' : Cette partie de la commande utilise awk pour analyser les sorties de ifconfig et extraire 
+seulement les lignes qui contiennent le mot "ether". Puis, le champ $3 de ces lignes est imprimé, ce qui correspond à l'adresse MAC.
+awk : awk est un interpréteur de script qui permet d'analyser des données dans des fichiers ou des entrées standard et de 
+les manipuler selon des conditions définies par l'utilisateur.
+
+////autre commande ; ifconfig -a | grep ether | awk -F' ' '{print $2}'
+
+La commande ifconfig -a | grep ether | awk -F' ' '{print $2}' a les éléments suivants :
+
+ifconfig -a : la commande ifconfig affiche les informations de configuration des interfaces réseau, et l'option -a montre 
+toutes les interfaces, y compris celles qui sont désactivées.
+grep ether : la commande grep recherche dans la sortie de la commande ifconfig les lignes qui contiennent le mot "ether". 
+Cela filtre les informations pour se concentrer sur les adresses MAC.
+awk -F' ' '{print $2}' : La commande awk est un outil de traitement de texte qui peut manipuler les lignes du texte 
+d'entrée et les sélectionner, les modifier, les formater et les afficher. L'option -F' ' indique à awk que le séparateur 
+de champ est un espace. La partie {print $2} signifie qu'il faut imprimer la deuxième colonne (qui contient l'adresse MAC) 
+de chaque ligne.
+En résumé, la commande permet de filtrer les informations sur les adresses MAC des interfaces réseau en utilisant 
+ifconfig, grep et awk et d'afficher uniquement les adresses MAC.
+
+
+

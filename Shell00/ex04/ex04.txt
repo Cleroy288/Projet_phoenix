@@ -1,0 +1,18 @@
+**La commande ls -ptUlm est une utilisation de la commande ls qui a été invoquée avec plusieurs options :
+
+p ajoute un caractère '/' à la fin des entrées qui sont des répertoires
+t trie les entrées en fonction de leur date de modification la plus récente
+U ne trie pas les entrées dans l'ordre de création du système de fichier, mais affiche les entrées dans l'ordre dans lequel elles ont été stockées sur le système de fichiers.
+l donne un format détaillé pour les entrées, avec plusieurs informations telles que les permissions, la taille, la date de modification, etc.
+m montre les entrées sous forme de liste dans une colonne, séparées par des virgules.
+Cependant, il n'y a pas de négation de l'affichage des fichiers cachés, ni de filtrage pour n'afficher que les entrées qui ne commencent pas par un point.
+
+
+
+**La commande ls -plUt est une commande qui permet de lister les fichiers et les répertoires dans le répertoire courant. Les options utilisées dans cette commande sont les suivantes :
+
+-p ajoute un caractère slash à la fin des noms de répertoires.
+-l active la vue longue, qui affiche plus d'informations sur chaque fichier, telles que les permissions, la date de modification, la taille, etc.
+-U trie les fichiers dans l'ordre de leur création, c'est-à-dire sans trier les fichiers.
+-t trie les fichiers par date de modification, du plus récent au plus ancien.
+Ainsi, la commande ls -plUt va afficher la liste des fichiers et des répertoires dans le répertoire courant, avec les informations nécessaires, triées par date de création et avec un caractère slash à la fin des noms de répertoires.

@@ -1,0 +1,26 @@
+La commande man file affiche le manuel de la commande file, qui peut être utilisée pour déterminer le type d'un fichier en analysant son contenu.
+
+Pour réaliser l'exercice demandé, vous devez créer un fichier magique qui permettra à la commande file de détecter les fichiers de type 42 file et qui seront constitués de la chaîne "42" au 42ème octet.
+
+Pour ce faire, vous pouvez utiliser les instructions suivantes :
+
+Créez un fichier nommé "ft_magic" dans le répertoire où vous souhaitez définir votre fichier magique.
+Ajoutez les lignes suivantes au fichier ft_magic :
+
+0 string 42       42 file\n
+Assurez-vous que le fichier ft_magic est correctement formaté et lisible.
+Ajoutez le chemin vers le fichier ft_magic au fichier de configuration du système, généralement appelé "magic", pour que la commande file puisse trouver et utiliser votre nouveau fichier magique.
+Il est important de noter que la méthode décrite ci-dessus peut varier en fonction de la distribution Linux que vous utilisez. Il est donc recommandé de consulter la documentation de votre système pour des instructions plus détaillées sur la création de fichiers magiques.
+
+
+cette command fait elle aussi ce qui est demandé dans cet exercice ? => 41	string 41	41 file
+Non, cette commande ne semble pas correspondre aux exigences décrites dans l'exercice. Le fichier magique nécessite d'avoir une chaîne "42" à l'octet 42 et de détecter les fichiers de type "42 file". Cette commande semble simplement vérifier si le fichier contient le nombre 41 dans sa première ligne, ce qui n'est pas ce qui est demandé dans l'exercice.
+
+
+
+charles.leroy288@gmail.com
+est ce que cette commande la correspond ? => 41	string 42	42 file
+Oui, cette commande correspond à ce qui est demandé dans l'exercice.
+
+
+autre commande => 41	string 42	42 file

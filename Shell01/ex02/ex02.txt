@@ -1,0 +1,32 @@
+find . -name "*.sh" -type f | sed 's/.sh$//'
+Cette commande est divisée en trois parties distinctes :
+
+La commande find : Elle est utilisée pour rechercher des fichiers dans le système de fichiers. Dans ce cas, la commande 
+find est utilisée pour chercher dans le répertoire courant (./) et dans tous ses sous-répertoires (-type f) les fichiers 
+dont le nom se termine par ".sh" (-name "*.sh").
+La commande sed : Elle est utilisée pour effectuer des modifications sur les entrées de la sortie de la commande find. 
+Dans ce cas, elle est utilisée pour supprimer le suffixe ".sh" des noms de fichiers trouvés par la 
+commande find (s/\.sh$//).
+La commande cat -e : Elle est utilisée pour afficher le contenu d'un fichier. Dans ce cas, elle est utilisée pour 
+afficher les noms de fichiers modifiés par la commande sed. La option -e permet d'afficher les caractères de retour chariot à la fin de chaque ligne.
+
+
+///autre comamnde ; find . -name "*.sh" -type f | rev | cut -d'.' -f2 | cut -d'/' -f1 | rev
+
+Oui, cette commande est correcte pour faire l'exercice en question. Elle fonctionne en utilisant la combinaison de différentes commandes pour accomplir le travail demandé :
+
+La commande "find . -name "*.sh" -type f" cherche dans le répertoire courant et ses sous-répertoires tous les fichiers 
+dont le nom se termine par ".sh".
+
+La commande "rev" renverse les lignes sorties par la commande "find", ce qui permet de travailler avec les noms de 
+fichiers en partant de la fin vers le début.
+
+La commande "cut -d'.' -f2" utilise le caractère '.' comme délimiteur et sélectionne la deuxième section 
+(c'est-à-dire la partie après le dernier point). Cela permet de retirer le '.sh' des noms de fichiers.
+
+La commande "cut -d'/' -f1" utilise le caractère '/' comme délimiteur et sélectionne la première section 
+(c'est-à-dire la partie avant le premier '/'). Cela permet de ne retenir que le nom de fichier sans le chemin.
+Enfin, la commande "rev" renverse à nouveau les lignes pour remettre le nom de fichier dans le bon ordre.
+
+
+

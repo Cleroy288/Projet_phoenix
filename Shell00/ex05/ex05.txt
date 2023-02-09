@@ -1,0 +1,15 @@
+Pour faire cet exercice, vous pouvez utiliser la commande git log pour afficher les informations de tous les commits de votre dépôt Git. Vous pouvez limiter le nombre de résultats à 5 en utilisant l'option -n 5, et afficher uniquement les identificateurs de commit en utilisant l'option --pretty=format:"%H". Le script final pourrait ressembler à ceci :
+
+git log -n 5 --pretty=format:"%H"
+Vous pouvez enregistrer ce script avec un nom de fichier tel que git_commit.sh et le rendre exécutable avec la commande 
+chmod +x git_commit.sh. Enfin, vous pouvez exécuter le script en tapant ./git_commit.sh dans votre terminal et rediriger 
+les résultats vers cat -e pour formater les résultats selon les spécifications de l'exercice.
+
+//autre commande 
+
+La commande git log -n 5 --pretty="%H" utilise la syntaxe de Git pour afficher les informations de commit. Les différentes parties de cette commande sont :
+
+git log : cette commande permet d'afficher l'historique des commits du dépôt Git actuel.
+-n 5 : cette option indique à Git de n'afficher que les 5 derniers commits.
+--pretty="%H" : cette option indique à Git quelle information sur les commits doit être affichée. La valeur %H signifie que seul le hash (identifiant unique) du commit doit être affiché.
+Ensemble, ces différentes parties de la commande permettent d'afficher les 5 derniers hashes de commit de votre dépôt Git.

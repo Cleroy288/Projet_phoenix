@@ -1,0 +1,19 @@
+Vous pouvez utiliser la commande suivante pour résoudre cet exercice:
+
+# Obtenir la liste des fichiers ignorés par git
+ignored_files=$(git ls-files --others --exclude-standard)
+
+# Afficher la liste des fichiers ignorés, un par ligne
+echo "$ignored_files" | tr ' ' '\n'
+Ce script utilise git ls-files pour obtenir la liste des fichiers ignorés par le dépôt git actuel. La commande git ls-files
+renvoie la liste des fichiers dans le dépôt et --others spécifie de ne pas inclure les fichiers déjà suivis par le dépôt 
+git. La commande --exclude-standard permet d'exclure les fichiers qui sont ignorés par défaut (par exemple, les 
+fichiers .gitignore). Enfin, la commande tr est utilisée pour remplacer les espaces par des sauts de ligne afin 
+d'afficher correctement les fichiers ignorés, un par ligne.
+
+//autre commande : git ls-files --exclude-standard -o -i
+
+cette commande est adéquate pour répondre à l'exercice demandé. git ls-files permet de lister les fichiers suivis par 
+Git, --exclude-standard permet d'exclure les fichiers ignorés selon les conventions standard de Git (par exemple, ceux 
+qui commencent par . ou #), et -o inclut les fichiers qui ne sont pas suivis, et -i inclut les fichiers ignorés. 
+Ainsi, cette commande permettra de lister les fichiers qui sont présents dans le dépôt local mais qui sont ignorés par Git.

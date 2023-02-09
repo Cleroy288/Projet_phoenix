@@ -1,0 +1,8 @@
+Pour faire cet exercice, vous pouvez utiliser les commandes suivantes :
+
+Créer un fichier "testShell00" dans votre répertoire de rendu en utilisant la commande "touch testShell00".
+Pour donner les permissions d'exécution pour ce fichier, vous pouvez utiliser la commande "chmod 455 testShell00".
+Pour vérifier les permissions du fichier, vous pouvez utiliser la commande "ls -l". La sortie sera similaire à :
+-rwxr-xr-x 1 [username] [group] 40 [date] testShell00
+Finalement, pour créer le fichier à rendre, vous pouvez utiliser la commande "tar -cf testShell00.tar testShell00". Cette commande va créer un fichier archive nommé "testShell00.tar" contenant le fichier "testShell00".
+Note : Les [username] et [group] dépendent de votre environnement et [date] dépend du jour où vous effectuez ces étapes. Les heures peuvent être remplacées par l'année si l'exercice est effectué plus de six mois après la date spécifiée.

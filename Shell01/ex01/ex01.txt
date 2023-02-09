@@ -1,0 +1,37 @@
+L'utilisation de la commande id peut vous aider à résoudre cet exercice. La ligne de commande suivante affichera les groupes auxquels appartient le login spécifié dans la variable d'environnement FT_USER :
+
+id -Gn "$FT_USER" | tr ' ' ','
+Cette commande utilise id pour obtenir la liste des groupes auxquels appartient le login spécifié dans FT_USER, puis 
+utilise tr pour remplacer les espaces par des virgules.
+
+///autre commande ; groups "$FT_USER" | tr ' ' , | tr -d "\n"
+cette commande semble faire ce qui est demandé dans l'exercice. Elle utilise la variable d'environnement FT_USER pour 
+obtenir le nom d'utilisateur, puis utilise la commande groups pour obtenir la liste des groupes dans lesquels ce nom 
+d'utilisateur est membre. Ensuite, la commande tr est utilisée pour remplacer les espaces par des virgules et pour 
+supprimer les sauts de ligne (\n).
+Le paramètre -d de la commande tr est utilisé pour supprimer les caractères spécifiés dans le fichier en entrée. Dans 
+cette commande spécifique, "\n" signifie le caractère de nouvelle ligne et donc la commande tr -d "\n" supprimera les 
+sauts de ligne du résultat produit par groups "$FT_USER".
+
+/////autre commande ; id -Gn $FT_USER | sed "s/ /,/g" | tr -d '\n'
+
+Cette commande comporte 3 parties principales :
+
+id -Gn $FT_USER : 
+Cette commande utilise le programme id pour afficher les groupes dans lesquels l'utilisateur spécifié 
+dans la variable d'environnement FT_USER est membre. L'option -G spécifie que la sortie doit inclure les groupes sous 
+forme numérique, et -n permet d'afficher les noms de groupes plutôt que les numéros d'ID.
+
+sed "s/ /,/g" : 
+Cette commande utilise sed pour remplacer tous les espaces avec des virgules. L'option s indique que nous 
+effectuons un remplacement, et la chaîne / /,/g spécifie que nous recherchons des espaces et que nous les remplaçons par 
+des virgules pour toutes les occurrences dans le texte (la option g signifie "global").
+
+tr -d '\n' : 
+Cette commande utilise tr pour supprimer les sauts de ligne. L'option -d indique que nous devons supprimer 
+les caractères spécifiés (ici, les sauts de ligne représentés par \n).
+Ainsi, cette commande tout entière affiche les groupes auxquels appartient l'utilisateur spécifié dans la variable 
+d'environnement FT_USER, en les séparant par des virgules et sans espaces ni sauts de ligne.
+
+
+

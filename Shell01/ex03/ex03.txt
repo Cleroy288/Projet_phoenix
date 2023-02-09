@@ -1,0 +1,22 @@
+Pour effectuer cet exercice, vous pouvez utiliser la commande suivante:
+
+find . -type f | wc -l; find . -type d | wc -l
+
+La première partie de la commande find . -type f | wc -l trouve tous les fichiers réguliers (-type f) dans le répertoire 
+courant et ses sous-répertoires (.), puis compte le nombre de lignes de sortie (wc -l).
+La seconde partie de la commande find . -type d | wc -l trouve tous les répertoires (-type d) dans le répertoire 
+courant et ses sous-répertoires (.), puis compte le nombre de lignes de sortie (wc -l).
+Le résultat final sera les deux nombres séparés par un retour à la ligne, ce qui donnera le nombre total de fichiers 
+réguliers et de répertoires.
+
+///autre code ; find . | wc -l | bc
+
+Cette commande convient également pour résoudre l'exercice, elle effectue les étapes suivantes :
+
+La commande find est utilisée pour trouver les fichiers et les répertoires dans le répertoire courant et tous ses 
+sous-répertoires, y compris le "." du répertoire de départ.
+La commande wc -l est utilisée pour compter le nombre de lignes de l'output produit par la commande find et donc le 
+nombre de fichiers réguliers et de répertoires.
+La sortie finale est la seule ligne contenant le nombre total de fichiers réguliers et de répertoires dans le 
+répertoire courant et tous ses sous-répertoires.
+

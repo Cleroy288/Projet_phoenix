@@ -1,0 +1,5 @@
+Pour créer un fichier "z" qui affiche "Z" suivi d'un retour à la ligne lorsque vous effectuez une commande "cat z", vous pouvez utiliser la commande suivante dans le terminal Unix :
+
+echo "Z" > z
+
+Cela créera un nouveau fichier appelé "z" et y écrira le texte "Z". Vous pouvez vérifier le contenu du fichier en utilisant la commande "cat z" et vous devriez voir "Z" suivi d'un retour à la ligne.
