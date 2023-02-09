@@ -1,0 +1,78 @@
+Les listes chaînées sont une structure de données couramment utilisée en programmation pour stocker des ensembles de 
+données liées les unes aux autres. Elles sont appelées "chaînées" car chaque élément de la liste est relié à un autre 
+élément par une référence.
+
+Chaque élément de la liste est appelé un nœud et contient deux parties : une valeur et une référence vers le nœud 
+suivant. Le dernier nœud de la liste a une référence nulle pour indiquer la fin de la liste.
+
+Pour ajouter un nouvel élément à la liste, vous pouvez soit ajouter un nouveau nœud en tête de la liste, soit ajouter 
+un nouveau nœud à la fin de la liste. Pour supprimer un élément de la liste, vous devez trouver la référence précédente 
+au nœud que vous souhaitez supprimer et la faire pointer vers le nœud suivant.
+
+Les listes chaînées sont souvent utilisées pour les algorithmes de tri et de recherche, car elles peuvent facilement 
+être parcourues pour trouver un élément spécifique. Elles sont également souvent utilisées pour les piles et les 
+files, car elles permettent une insertion et une suppression rapides et efficaces aux extrémités de la liste.
+
+Voici un exemple de code en utilisant une liste chaînée en C :
+struct Node {
+   int value;
+   struct Node *next;
+};
+
+struct Node *head = NULL;
+
+// Ajout d'un nouveau nœud en tête de liste
+void push(int value) {
+   struct Node *new_node = (struct Node *) malloc(sizeof(struct Node));
+   new_node->value = value;
+   new_node->next = head;
+   head = new_node;
+}
+
+// Suppression du nœud en tête de liste
+void pop() {
+   if (head == NULL) return;
+   struct Node *temp = head;
+   head = head->next;
+   free(temp);
+}
+
+En résumé, les listes chaînées sont une structure de données pratique pour stocker et gérer des ensembles de données 
+liées les unes aux autres. Elles sont faciles à utiliser et permettent une insertion et une suppression 
+rapides et efficaces.
+
+//////////////COMMENT SE DEPLACER DANS UNE LISTE CHAINEE ?
+
+Les listes chainées sont une structure de données couramment utilisée en programmation pour stocker une séquence 
+d'éléments de manière efficace. Elles sont appelées ainsi car chaque élément est relié à l'élément suivant par une 
+référence appelée "next".
+
+La syntaxe utilisée pour se déplacer dans une liste chainée est généralement de la forme suivante : node->next. Cette 
+syntaxe signifie que nous sommes en train de suivre la référence "next" pour accéder au prochain élément dans la liste.
+
+Voici un exemple concret de comment parcourir une liste chainée en entier :
+struct Node{
+  int data;
+  Node *next;
+};
+
+void printList(Node *head)
+{
+  Node *current = head;  // On commence par le premier élément de la liste
+  while(current != NULL){  // Tant que l'on n'a pas atteint la fin de la liste
+    cout << current->data << " ";  // On affiche les données actuelles
+    current = current->next;  // On se déplace vers le prochain élément
+  }
+}
+
+Dans ce code, nous définissons une structure appelée "Node" qui représente chaque élément dans la liste. Chaque node a 
+une valeur de données "data" et une référence "next" qui pointe vers le prochain élément. Nous avons également défini 
+une fonction "printList" qui prend en entrée la tête de la liste (le premier élément).
+
+Dans la fonction "printList", nous définissons un pointeur "current" qui pointe vers la tête de la liste. Ensuite, nous 
+entrons dans une boucle while qui se poursuit tant que "current" n'est pas nul (c'est-à-dire que l'on n'a pas atteint 
+la fin de la liste). À chaque tour de boucle, nous affichons les données actuelles et nous déplaçons "current" vers 
+le prochain élément en utilisant la syntaxe "current = current->next". La boucle continue jusqu'à ce que "current" 
+soit nul et la fonction se termine.
+
+En utilisant cette syntaxe, nous pouvons parcourir toute la liste.
