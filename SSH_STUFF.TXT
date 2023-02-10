@@ -1,0 +1,7 @@
+
+crée une clef SSH ; ssh-keygen
+faire enter sur les demandes de mot2passe etc...
+Si un shéma s'affiche == tout est ok
+
+voir : afficher la clef ssh publique ; cat ~/.ssh/id_rsa.pub
+
