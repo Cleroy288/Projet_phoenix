@@ -1,0 +1,17 @@
+En C, une chaîne de caractères, ou string, est un tableau de caractères terminé par un caractère nul (0). Le caractère 
+nul marque la fin de la chaîne et est utilisé pour déterminer la longueur de la chaîne.
+
+Les chaînes de caractères sont souvent utilisées pour stocker et manipuler des données de type texte. Pour créer une 
+chaîne de caractères, vous pouvez déclarer une variable de type char avec une valeur initiale entre guillemets. 
+Par exemple:	char nom[] = "John Doe";
+
+Vous pouvez également utiliser la fonction malloc pour allouer de l'espace pour une chaîne de caractères à la volée. 
+Par exemple:	char *nom = (char*)malloc(10 * sizeof(char));
+		strcpy(nom, "John Doe");
+
+Vous pouvez accéder aux caractères individuels d'une chaîne de caractères en utilisant un index, comme dans un tableau. 
+Par exemple:	char c = nom[2]; // c contiendra le caractère 'h'
+
+Il existe de nombreuses fonctions prédéfinies en C pour travailler avec des chaînes de caractères, telles que strlen, 
+strcpy, strcat, strcmp, etc. Vous pouvez également écrire vos propres fonctions pour manipuler des chaînes de caractères.
+

@@ -1,0 +1,38 @@
+La fonction write en C est utilisée pour écrire des données dans un fichier ouvert en mode écriture. Elle est définie 
+dans le header file unistd.h et est utilisée de la manière suivante :
+
+int write(int fildes, const void *buf, size_t nbyte);
+Les arguments de la fonction write sont les suivants :
+
+fildes : un entier qui représente le descripteur de fichier, généralement obtenu grâce à la fonction open.
+buf : un pointeur vers les données à écrire.
+nbyte : la taille en octets des données à écrire.
+
+La fonction write renvoie le nombre d'octets écrits avec succès. Si la valeur renvoyée est inférieure à nbyte, cela 
+signifie qu'il y a eu une erreur lors de l'écriture.
+
+Il est important de noter que la fonction write écrit les données dans le fichier dans l'ordre où elles se trouvent dans 
+la mémoire, ce qui signifie que si vous écrivez un tableau de caractères, ils seront écrits dans le fichier dans le même 
+ordre que dans le tableau.
+
+Voici un exemple simple d'utilisation de la fonction write :
+
+#include <unistd.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+   int fd;
+   char message[] = "Bonjour, je suis un message écrit avec write.";
+   int length = strlen(message);
+
+   fd = open("message.txt", O_CREAT | O_WRONLY, 0666);
+   write(fd, message, length);
+   close(fd);
+
+   return 0;
+}
+
+Cet exemple ouvre un fichier nommé "message.txt", y écrit le message donné et le ferme. La fonction strlen est utilisée 
+pour déterminer la longueur du message en octets pour le passer à la fonction write.

@@ -1,0 +1,37 @@
+Les tableaux à 2 dimensions en C sont en réalité des tableaux de tableaux. Ils sont souvent utilisés pour représenter 
+des matrices de données. Chaque élément dans le tableau peut être considéré comme une ligne ou une colonne dans la 
+matrice.
+
+Pour déclarer un tableau à 2 dimensions en C, vous devez spécifier les deux dimensions, la première pour les lignes et 
+la seconde pour les colonnes. Par exemple, pour déclarer un tableau de 3 lignes et 4 colonnes, vous pourriez écrire :
+
+int tableau[3][4];
+Pour accéder à un élément particulier dans le tableau, vous pouvez utiliser la syntaxe suivante :
+
+tableau[i][j];
+où i est l'index de la ligne et j est l'index de la colonne.
+
+Il est également possible d'initialiser un tableau à 2 dimensions lors de sa déclaration en utilisant la syntaxe 
+suivante :
+
+int tableau[3][4] = {
+  {1, 2, 3, 4},
+  {5, 6, 7, 8},
+  {9, 10, 11, 12}
+};
+
+Vous pouvez également allouer un tableau à 2 dimensions dynamiquement en utilisant la fonction malloc. Pour cela, vous 
+devez d'abord allouer un tableau de pointeurs, puis allouer chaque ligne séparément. Par exemple :
+
+int **tableau;
+int i, j;
+int lignes = 3, colonnes = 4;
+
+tableau = malloc(lignes * sizeof(int *));
+for (i = 0; i < lignes; i++) {
+  tableau[i] = malloc(colonnes * sizeof(int));
+}
+
+En utilisant ce modèle, vous pouvez allouer un tableau à 2 dimensions de la taille que vous souhaitez, ce qui peut être 
+utile lorsque vous ne connaissez pas à l'avance la taille du tableau nécessaire. Il est important de se rappeler de 
+libérer la mémoire allouée avec free lorsque vous n'en avez plus besoin.

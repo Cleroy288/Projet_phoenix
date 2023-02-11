@@ -1,0 +1,19 @@
+La mémoire est un composant essentiel de l'ordinateur qui stocke des données temporaires et permanentes pour le 
+fonctionnement du système. La mémoire est divisée en plusieurs parties, telles que la mémoire vive (RAM), la mémoire 
+morte (ROM) et la mémoire cache.
+
+En C, l'allocation de mémoire est gérée manuellement par le programmeur en utilisant des fonctions telles que malloc(), 
+calloc() et realloc(). Le pointeur est utilisé pour accéder à la mémoire allouée.
+
+Lorsque vous déclarez une variable, l'ordinateur alloue de l'espace en mémoire pour stocker sa valeur. Le symbole & 
+devant la variable permet de récupérer l'adresse de mémoire associée à cette variable. Par exemple, &x renvoie l'adresse 
+de mémoire où la valeur de x est stockée.
+
+Les tableaux sont un type de données en C qui permettent de stocker plusieurs valeurs de même type. Lorsque vous déclare
+un tableau, l'ordinateur alloue un bloc continu de mémoire pour stocker toutes les valeurs du tableau. Chaque élément du
+tableau peut être accédé en utilisant un index. Par exemple, x[i] permet d'accéder à la ième valeur du tableau x.
+
+En conclusion, la mémoire est un composant crucial de l'ordinateur qui permet de stocker des données temporaires et 
+permanentes pour le fonctionnement du système. En C, le programmeur peut gérer manuellement l'allocation de mémoire en 
+utilisant des fonctions telles que malloc(), et accéder aux données stockées en utilisant des pointeurs et des index.
+
