@@ -5,8 +5,7 @@ partie de la zone 51.
 
 Je me vois au regret de vous décevoir.
 
-Ce projet n'est rien d'autre qu'une succession d'exercices trouvés en ligne en rapport avec l'école 42, ceux - ci ne
-Ne viennent pas de l'école elle-même.
+Ce projet n'est rien d'autre qu'une succession d'exercices trouvés en ligne en rapport avec l'école 42, ceux - ci ne viennent pas de l'école elle-même.
 
 Ce qui veut dire qu'aucun de ces exercices n'est fiable d'utilisation,  pour vous si vous souhaitez en faire usage au
 cour de votre piscine.
