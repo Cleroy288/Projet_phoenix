@@ -29,4 +29,18 @@ La commande "cut -d'/' -f1" utilise le caractère '/' comme délimiteur et séle
 Enfin, la commande "rev" renverse à nouveau les lignes pour remettre le nom de fichier dans le bon ordre.
 
 
+first command ; find . -type f -name  "*.sh" -exec basename {} .sh \;
 
+La commande "find" permet de chercher des fichiers ou des répertoires en fonction de certains critères.
+
+-type f : L'option "-type" spécifie le type de fichiers que vous recherchez. Dans ce cas, le type est "f" pour "fichier".
+
+-name ".sh" : L'option "-name" permet de spécifier un motif pour le nom du fichier que vous recherchez. Le motif ".sh" 
+correspond à tous les fichiers ayant une extension .sh.
+
+-exec basename {} .sh ; : L'option "-exec" permet d'exécuter une commande pour chaque fichier trouvé. La commande 
+"basename {} .sh" extrait le nom de base du fichier trouvé sans son extension. Le ";" à la fin de la ligne de commande 
+est nécessaire pour indiquer la fin de la commande à exécuter.
+
+La syntaxe complète permet donc de trouver tous les fichiers avec une extension .sh et d'extraire leur nom de base sans 
+extension.

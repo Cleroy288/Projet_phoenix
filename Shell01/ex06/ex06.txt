@@ -24,3 +24,21 @@ sortie. Ici, nous utilisons la option "-n" pour n'afficher que ce qui est spéci
 commande "p;n" qui spécifie de ne tenir compte que de chaque deuxième ligne en exécutant l'impression "p".
 En résumé, cette commande combine la sortie de ls -l avec l'utilisation de sed pour imprimer un ls -l une ligne sur 
 deux, à partir de la première.
+
+first commande => ls -l | awk 'NR%2'
+
+La commande "ls -l | awk 'NR%2'" permet d'afficher les informations sur les fichiers et répertoires présents dans le 
+répertoire courant. Elle est constituée de deux parties principales : "ls -l" et "awk 'NR%2'".
+
+La première partie "ls -l" est une commande qui liste les fichiers et répertoires présents dans le répertoire courant. Le 
+paramètre "-l" signifie "long format", ce qui permet d'afficher des informations détaillées sur les fichiers et 
+répertoires, telles que le propriétaire, les permissions, la date de modification, etc.
+
+La seconde partie "awk 'NR%2'" est une commande qui utilise le langage d'analyse de données AWK pour filtrer les 
+informations affichées par la commande "ls -l". Le paramètre "NR" représente le numéro de ligne actuel dans le flux de 
+données en entrée. Le modulo "NR%2" renvoie 1 pour les lignes impaires et 0 pour les lignes paires. Ainsi, seules les 
+lignes impaires seront affichées, ce qui correspond à une affichage alterné des fichiers et répertoires présents dans le 
+répertoire courant.
+
+En conclusion, la commande "ls -l | awk 'NR%2'" affiche une liste détaillée des fichiers et répertoires alternés du 
+répertoire courant.

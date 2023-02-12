@@ -35,4 +35,20 @@ En résumé, la commande permet de filtrer les informations sur les adresses MAC
 ifconfig, grep et awk et d'afficher uniquement les adresses MAC.
 
 
+first command ; ifconfig -a | grep -v "ethernet" | grep ether | cut -d " " -f 2
 
+La commande ifconfig -a est utilisée pour afficher les informations de configuration des interfaces réseau sur un système
+ Unix-like.
+
+grep -v "ethernet" est utilisé pour exclure les lignes qui contiennent le mot "ethernet". Cela permet de ne conserver que 
+les lignes qui sont pertinentes pour l'affichage de l'adresse MAC (Media Access Control) de l'interface réseau.
+
+grep ether est utilisé pour filtrer les lignes qui contiennent le mot "ether". Cela nous permet de ne conserver que les 
+lignes qui nous intéressent pour l'affichage de l'adresse MAC.
+
+Enfin, la commande cut -d " " -f 2 est utilisée pour extraire la deuxième colonne des lignes qui correspondent à 
+l'expression précédente. La délimitation des champs (field) est effectuée en utilisant les espaces comme séparateurs 
+grâce à l'option -d " ". L'option -f 2 signifie que nous ne voulons conserver que la deuxième colonne.
+
+En somme, la commande affichera l'adresse MAC de l'interface réseau sur le système, en excluant les informations sur les 
+autres types d'interfaces et en ne conservant que l'adresse MAC elle-même.

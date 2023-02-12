@@ -35,3 +35,17 @@ expression arithmétique.
 En résumé, cette commande utilise find pour rechercher tous les fichiers et dossiers du répertoire courant, utilise wc 
 pour compter le nombre de lignes de la sortie de find, et utilise bc pour traiter le résultat en tant qu'expression 
 arithmétique.
+
+first commande ; find . | wc -l | tr -d " "
+
+La commande find . permet de rechercher les fichiers et dossiers dans le répertoire courant (indiqué par .) et les 
+sous-répertoires associés.
+
+La commande wc -l signifie "word count - lines". Elle permet de compter le nombre de lignes dans la sortie standard 
+(stdout).
+
+La commande tr -d " " signifie "translate - delete". Elle permet de supprimer les espaces de la sortie stdout de la 
+commande précédente.
+
+En résumé, cette commande trouve tous les fichiers et dossiers dans le répertoire courant, compte le nombre de lignes de 
+la sortie et enlève les espaces pour donner le nombre total de fichiers et dossiers trouvés.

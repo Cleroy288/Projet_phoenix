@@ -34,4 +34,16 @@ Ainsi, cette commande tout entière affiche les groupes auxquels appartient l'ut
 d'environnement FT_USER, en les séparant par des virgules et sans espaces ni sauts de ligne.
 
 
+first commande ; id -Gn $FT_USER | tr ' ' ',' | tr -d "\n"
 
+Cette commande bash accomplit plusieurs tâches pour renvoyer le nom des groupes d'un utilisateur. Les éléments clés sont 
+les suivants :
+
+id - Cette commande est utilisée pour afficher les informations d'identification pour un utilisateur, y compris son UID 
+(identificateur d'utilisateur), son GID (identificateur de groupe) et les groupes auxquels il appartient.
+-Gn - Cette option demande à la commande id de ne retourner que les noms des groupes auxquels l'utilisateur appartient.
+$FT_USER - Cette variable d'environnement représente le nom d'utilisateur actuel.
+tr ' ' ',' - Cette commande remplace les espaces dans la sortie de la commande id avec des virgules.
+tr -d "\n" - Cette commande supprime les sauts de ligne de la sortie de la commande tr.
+En résumé, cette commande retourne la liste des groupes d'un utilisateur sous forme de chaîne de caractères séparées par 
+des virgules, sans saut de ligne à la fin.
