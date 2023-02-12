@@ -6,8 +6,22 @@ Pour créer ce fichier avec le nom spécifié, vous pouvez utiliser la commande 
 echo "42" > "\?$*'MaRViN'*$?\"
 Exemple :
 
-makefile
-Copy code
+
 $ echo "42" > "\?$*'MaRViN'*$?\"
 $ ls -lRa *MaRV* | cat -e
 -rw---xr-- 1 75355 32015 2 Oct 2 12:21 "\?$*'MaRViN'*$?\"$
+
+La commande echo permet d'afficher du texte dans la sortie standard. Dans ce cas-ci, la sortie standard est redirigée vers
+ un fichier en utilisant la syntaxe >. Le nom de ce fichier est un peu spécial, car il contient des caractères spéciaux 
+tels que ?, $, ', * et ".
+
+Ces caractères sont généralement utilisés pour des fins spécifiques dans les commandes shell, comme la substitution de 
+variables ou la protection des caractères spéciaux. Par conséquent, lorsque vous utilisez des caractères spéciaux dans 
+un nom de fichier, vous devez les protéger en les entourant de guillemets simples ou doubles.
+
+Cependant, dans ce cas précis, les guillemets ne sont pas suffisants pour protéger les caractères spéciaux. Pour résoudre 
+ce problème, vous pouvez utiliser l'échappement de caractères, qui consiste à ajouter un antislash (\) devant le caractère
+que vous souhaitez protéger.
+
+La commande echo "42" > "\?$*'MaRViN'*$?\" crée donc un fichier avec le nom ?$*'MaRViN'*$?" et y écrit la chaîne de 
+caractères "42".

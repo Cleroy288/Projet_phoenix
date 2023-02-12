@@ -18,7 +18,7 @@ Non, cette commande ne semble pas correspondre aux exigences décrites dans l'ex
 
 
 
-charles.leroy288@gmail.com
+
 est ce que cette commande la correspond ? => 41	string 42	42 file
 Oui, cette commande correspond à ce qui est demandé dans l'exercice.
 

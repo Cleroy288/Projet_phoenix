@@ -28,3 +28,29 @@ touch -t YYYYMMDDHHMM filename
 où "YYYYMMDDHHMM" est la nouvelle date et l'heure que vous souhaitez définir pour le fichier et "filename" est le nom 
 du fichier.
 
+c'est quoi se scommandes ? => 
+
+ln -s et ln -t sont des options pour la commande ln en shell Unix.
+
+ln -s signifie "symbolic link" et crée un lien symbolique, qui est un alias pour un autre fichier ou répertoire. Le lien 
+symbolique est indépendant du fichier ou répertoire d'origine et permet de naviguer vers ce dernier sans que la 
+structure de l'arborescence ne soit affectée.
+
+ln -t signifie "target directory", et il s'agit d'une option utilisée pour indiquer le répertoire cible où les liens 
+seront créés. Cela est utile lorsque vous souhaitez créer plusieurs liens dans le même répertoire, sans avoir à changer 
+de répertoire à chaque fois.
+
+En résumé, ln -s crée un lien symbolique, tandis que ln -t spécifie le répertoire cible pour la création de liens.
+
+Les commandes ln -s et ln -t sont similaires dans leur fonctionnement de base, car elles permettent toutes deux de créer 
+des liens symboliques, mais elles diffèrent dans la façon de spécifier les fichiers de source et de destination.
+
+La commande ln -s prend en premier argument le fichier source et en second argument le nom du lien symbolique. Par
+ exemple, pour créer un lien symbolique link qui pointe vers le fichier file, la commande serait ln -s file link.
+
+La commande ln -t fonctionne de manière similaire, mais c'est l'ordre des arguments qui est inversé. Ainsi, pour créer 
+le même lien symbolique que précédemment, la commande serait ln -t link file.
+
+En résumé, la différence entre ln -s et ln -t réside principalement dans l'ordre des arguments pour spécifier les fichiers
+de source et de destination.
+

@@ -20,3 +20,18 @@ nombre de fichiers réguliers et de répertoires.
 La sortie finale est la seule ligne contenant le nombre total de fichiers réguliers et de répertoires dans le 
 répertoire courant et tous ses sous-répertoires.
 
+
+Cette commande utilise plusieurs composants pour accomplir sa tâche. Je vais décomposer chacun d'entre eux pour vous aider
+à comprendre ce qu'elle fait :
+
+find .: Cette partie utilise la commande find pour rechercher les fichiers dans le répertoire courant (.). La commande 
+find recherche des fichiers et des dossiers dans un système de fichiers en fonction de certains critères. Ici, find 
+recherchera tous les fichiers et dossiers du répertoire courant.
+wc -l: Cette partie utilise la commande wc (word count) pour compter le nombre de lignes de la sortie de la commande 
+précédente. La option -l spécifie que nous voulons compter le nombre de lignes.
+bc: La commande bc est un interpréteur de calculs simples. Il prend en entrée un expression arithmétique et renvoie le 
+résultat de cette expression. Ici, le résultat de la commande wc -l est transmis à bc pour être traité comme une 
+expression arithmétique.
+En résumé, cette commande utilise find pour rechercher tous les fichiers et dossiers du répertoire courant, utilise wc 
+pour compter le nombre de lignes de la sortie de find, et utilise bc pour traiter le résultat en tant qu'expression 
+arithmétique.

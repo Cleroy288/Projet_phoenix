@@ -12,3 +12,21 @@ La commande find . -type f \( -name "*" -o -name "#*#" \) -delete -print est une
 les fichiers correspondant aux critères définis dans l'exercice. La modification consistant à ajouter -print à la fin de 
 la commande va afficher le nom des fichiers trouvés et effacés, ce qui peut être utile pour vérifier que la commande 
 fonctionne correctement.
+
+///////////////
+
+La commande find est une commande Unix qui permet de rechercher des fichiers et des répertoires dans le système de 
+fichiers. La syntaxe générale de cette commande est la suivante :
+
+find <chemin de départ> <options> <actions>
+. représente le chemin de départ de la recherche. Il signifie le répertoire actuel.
+-type f spécifie que nous recherchons des fichiers, et non des répertoires.
+\( -name "*" -o -name "#*#" \) est une expression de recherche qui définit les critères de sélection des fichiers. Les 
+options -name indiquent le nom des fichiers recherchés, et -o signifie "OU", ce qui signifie que nous recherchons soit 
+des fichiers nommés "", soit des fichiers nommés "##".
+-delete est une action qui sera effectuée sur les fichiers sélectionnés par la commande find. Cette option supprime les 
+fichiers sélectionnés.
+-print est une autre action qui sera effectuée sur les fichiers sélectionnés. Cette option affiche le nom des fichiers 
+sélectionnés.
+Ainsi, la commande complète trouve tous les fichiers de type fichier (et pas répertoire) nommés "" ou "##" dans le 
+répertoire actuel et les supprime, puis les affiche.
