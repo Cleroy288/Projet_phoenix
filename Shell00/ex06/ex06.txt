@@ -17,3 +17,17 @@ cette commande est adéquate pour répondre à l'exercice demandé. git ls-files
 Git, --exclude-standard permet d'exclure les fichiers ignorés selon les conventions standard de Git (par exemple, ceux 
 qui commencent par . ou #), et -o inclut les fichiers qui ne sont pas suivis, et -i inclut les fichiers ignorés. 
 Ainsi, cette commande permettra de lister les fichiers qui sont présents dans le dépôt local mais qui sont ignorés par Git.
+
+
+commande 1 ; git ls-files --others --ignored --exclude-standard
+
+La commande git ls-files permet de lister les fichiers qui sont suivis par Git et qui sont présents dans l'index.
+
+Les options --others et --ignored permettent respectivement de montrer les fichiers qui ne sont pas suivis par Git et 
+ceux qui sont ignorés.
+
+L'option --exclude-standard spécifie que Git doit utiliser la configuration de l'exclusion standard pour déterminer les 
+fichiers à ignorer. Cette configuration inclut des règles telles que .o, ~, .DS_Store, etc.
+
+Ainsi, en utilisant cette commande, on peut voir la liste des fichiers qui sont ignorés dans le dépôt Git actuel et qui 
+ne sont pas suivis par Git.

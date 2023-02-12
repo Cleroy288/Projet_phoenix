@@ -15,4 +15,18 @@ Cependant, il n'y a pas de négation de l'affichage des fichiers cachés, ni de 
 -l active la vue longue, qui affiche plus d'informations sur chaque fichier, telles que les permissions, la date de modification, la taille, etc.
 -U trie les fichiers dans l'ordre de leur création, c'est-à-dire sans trier les fichiers.
 -t trie les fichiers par date de modification, du plus récent au plus ancien.
-Ainsi, la commande ls -plUt va afficher la liste des fichiers et des répertoires dans le répertoire courant, avec les informations nécessaires, triées par date de création et avec un caractère slash à la fin des noms de répertoires.
+Ainsi, la commande ls -plUt va afficher la liste des fichiers et des répertoires dans le répertoire courant, avec les 
+informations nécessaires, triées par date de création et avec un caractère slash à la fin des noms de répertoires.
+
+commande 1 : ls -p -m -t
+
+La commande ls est utilisée pour lister les fichiers et les répertoires d'un dossier.
+
+Les options utilisées avec cette commande sont :
+
+-p : Ajoute un slash / à la fin des noms de répertoire.
+-m : Affiche les entrées séparées par une virgule.
+-t : Trie les entrées par date de création.
+En utilisant ces options, la commande ls -p -m -t affichera les entrées (fichiers et répertoires) du répertoire courant, 
+séparées par des virgules, triées par date de création et ajoutera un slash / à la fin des noms de répertoire. Les entrées
+cachées commençant par un point . ou .. ne seront pas affichées.

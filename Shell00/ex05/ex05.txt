@@ -13,3 +13,7 @@ git log : cette commande permet d'afficher l'historique des commits du dépôt G
 -n 5 : cette option indique à Git de n'afficher que les 5 derniers commits.
 --pretty="%H" : cette option indique à Git quelle information sur les commits doit être affichée. La valeur %H signifie que seul le hash (identifiant unique) du commit doit être affiché.
 Ensemble, ces différentes parties de la commande permettent d'afficher les 5 derniers hashes de commit de votre dépôt Git.
+
+first commande : git log -5 --pretty=oneline | cut -c 1-40
+
+cette commande est correcte pour réaliser l'exercice indiqué. Elle liste les 5 derniers commits de votre dépôt Git en utilisant la commande git log avec l'option -5 pour n'afficher que les 5 derniers et --pretty=oneline pour formater les résultats sur une seule ligne. Ensuite, la commande cut est utilisée pour extraire les 40 premiers caractères de chaque ligne, qui correspondent à l'ID du commit. Les résultats seront affichés avec un caractère de nouvelle ligne ($) à la fin de chaque ligne grâce à l'option -e de la commande cat.

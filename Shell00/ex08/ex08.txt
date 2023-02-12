@@ -30,3 +30,17 @@ fichiers sélectionnés.
 sélectionnés.
 Ainsi, la commande complète trouve tous les fichiers de type fichier (et pas répertoire) nommés "" ou "##" dans le 
 répertoire actuel et les supprime, puis les affiche.
+
+
+first command ; find . -type f \( -name "*~" -o -name "#*#" \) -print -delete
+
+La première commande "find . -type f" est utilisée pour trouver des fichiers dans le répertoire courant (.) et de type 
+fihier (-type f).
+
+"(-name "~" -o -name "##")" est une expression booléenne qui spécifie deux options pour le nom du fichier : "-name """ 
+recherche des fichiers dont le nom se termine par "" et "-name "##"" recherche des fichiers dont le nom commence et se 
+termine par "#". L'opérateur logique "-o" (OR) permet de combiner ces deux options pour trouver tous les fichiers 
+correspondant à l'un de ces deux critères.
+
+"-print -delete" indique à la commande "find" d'afficher le nom de chaque fichier trouvé (avec "-print") et de les 
+supprimer ensuite (-delete).
