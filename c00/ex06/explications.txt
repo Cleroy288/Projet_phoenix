@@ -1,0 +1,78 @@
+Ce programme en C affiche toutes les combinaisons possibles de 2 chiffres différents, séparés par une virgule et un espace, sur une seule ligne. Il utilise la fonction ft_print_comb2 pour imprimer les combinaisons et la fonction display pour afficher chaque chiffre.
+
+La première ligne #include <unistd.h> inclut le fichier d'en-tête unistd.h, qui définit les fonctions d'entrée/sortie 
+standard pour le système.
+
+La fonction ft_putchar utilise la fonction write pour écrire un seul caractère sur la sortie standard.
+
+La fonction display prend en entrée un entier et l'affiche en utilisant les fonctions ft_putchar. Si le nombre a plus de 1 
+chiffre, il est divisé pour en obtenir les deux chiffres individuels, qui sont ensuite affichés en utilisant ft_putchar. 
+Sinon, deux zéros sont affichés avant le chiffre unique.
+
+La fonction ft_print_comb2 utilise deux boucles imbriquées pour parcourir toutes les combinaisons possibles de 2 chiffres 
+différents, appelant la fonction display pour les afficher et utilisant ft_putchar pour ajouter les virgules et les espaces 
+nécessaires. La condition de fin de la boucle vérifie que les combinaisons ne sont imprimées que si elles ne sont pas les 
+dernières disponibles.
+
+Enfin, la fonction main appelle simplement ft_print_comb2 pour effectuer l'impression des combinaisons.
+
+vas en détail sur les fonctions display et print_comb2 
+La fonction display prend un argument nb qui est un entier. Elle se charge d'afficher l'entier passé en argument sur la 
+sortie standard (l'écran). Si l'entier est plus grand que 9, alors display calcule le premier et le deuxième chiffre de 
+l'entier en utilisant une division entière et un modulo, puis appelle la fonction ft_putchar pour afficher chaque chiffre 
+sur la sortie standard. Si l'entier est inférieur à 9, la fonction affiche simplement un 0 et le chiffre correspondant.
+
+La fonction ft_print_comb2 est la fonction principale de ce programme. Elle se charge de générer et d'afficher toutes les 
+combinaisons de deux chiffres différents sur la sortie standard. Cette fonction utilise deux boucles imbriquées pour générer
+toutes les combinaisons possible, et appelle la fonction display pour afficher les combinaisons générées sur la sortie 
+standard. Si la combinaison générée n'est pas la dernière de la liste, alors la fonction ajoute une virgule et un espace 
+pour séparer les combinaisons. Enfin, la fonction main appelle simplement la fonction ft_print_comb2 pour démarrer 
+l'exécution du programme.
+
+
+explique leurs fonctionnement en détail
+La fonction display a pour objectif d'afficher un nombre sur la sortie standard. Elle prend en entrée un nombre entier nb et
+affiche son représentation en chiffres sur la sortie standard. La fonction se comporte différemment selon la valeur de nb :
+
+Si nb est supérieur à 9, la fonction divise nb par 10 pour obtenir la première chiffre et calcule le reste de cette division
+pour obtenir la seconde chiffre. Elle utilise ensuite la fonction ft_putchar pour afficher chacune de ces deux chiffres en 
+ajoutant 48 pour convertir le nombre en son caractère ASCII correspondant.
+Si nb est inférieur ou égal à 9, la fonction affiche un 0 suivi de nb converti en caractère ASCII.
+La fonction ft_print_comb2 est la fonction principale qui génère les paires de nombres. Elle utilise deux boucles while 
+imbriquées pour générer toutes les combinaisons possibles de paires de nombres allant de 0 à 99. La première boucle 
+incrémente i de 1 à chaque tour de boucle, et la seconde boucle incrémente o de 1 à chaque tour de boucle. À chaque tour de 
+boucle, la fonction appelle la fonction display pour afficher chacun des nombres, puis utilise ft_putchar pour afficher une 
+virgule et un espace si cela est nécessaire. La fonction s'arrête lorsque les deux boucles ont parcouru toutes les valeurs 
+possibles de 0 à 99.
+
+La fonction ft_putchar est une fonction simple qui prend en entrée un caractère c et l'affiche sur la sortie standard en 
+utilisant la fonction write du fichier unistd.h.
+
+Enfin, la fonction main appelle simplement ft_print_comb2 pour démarrer le processus de génération et d'affichage des paires
+de nombres.
+
+
+
+La fonction display a pour objectif d'afficher un nombre sur la sortie standard. Elle prend en entrée un nombre entier nb et
+affiche son représentation en chiffres sur la sortie standard. La fonction se comporte différemment selon la valeur de nb :
+
+Si nb est supérieur à 9, la fonction divise nb par 10 pour obtenir la première chiffre et calcule le reste de cette division
+pour obtenir la seconde chiffre. Elle utilise ensuite la fonction ft_putchar pour afficher chacune de ces deux chiffres en 
+ajoutant 48 pour convertir le nombre en son caractère ASCII correspondant.
+Si nb est inférieur ou égal à 9, la fonction affiche un 0 suivi de nb converti en caractère ASCII.
+La fonction ft_print_comb2 est la fonction principale qui génère les paires de nombres. Elle utilise deux boucles while 
+imbriquées pour générer toutes les combinaisons possibles de paires de nombres allant de 0 à 99. La première boucle 
+incrémente i de 1 à chaque tour de boucle, et la seconde boucle incrémente o de 1 à chaque tour de boucle. À chaque tour de 
+boucle, la fonction appelle la fonction display pour afficher chacun des nombres, puis utilise ft_putchar pour afficher une 
+virgule et un espace si cela est nécessaire. La fonction s'arrête lorsque les deux boucles ont parcouru toutes les valeurs 
+possibles de 0 à 99.
+
+La fonction ft_putchar est une fonction simple qui prend en entrée un caractère c et l'affiche sur la sortie standard en 
+utilisant la fonction write du fichier unistd.h.
+
+Enfin, la fonction main appelle simplement ft_print_comb2 pour démarrer le processus de génération et d'affichage des paires
+de nombres.
+
+
+
+

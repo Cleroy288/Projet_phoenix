@@ -76,3 +76,21 @@ int main(int argc, const char *argv[])
 	ft_print_combn(len);
 	return 0;
 }
+
+/*
+Ce programme est écrit en C et imprime toutes les combinaisons possibles de chiffres de 0 à 9 pour une longueur donnée.
+
+Il inclut deux fonctions principales : ft_putchar() et ft_print_combn(). La première fonction, ft_putchar(), prend un 
+caractère en entrée et l'imprime à l'écran en utilisant la fonction write() de la bibliothèque unistd.h. La seconde 
+fonction, ft_print_combn(), prend un nombre entier en entrée qui représente la longueur de la combinaison de chiffres 
+souhaitée.
+
+La fonction ft_print_combn() définit un tableau d'entiers appelé "tab", initialise ses valeurs à 0, 1, 2, ..., nb - 1 (où 
+nb est la longueur souhaitée) et appelle la fonction ft_putout() pour les imprimer. La fonction ft_print_combn_increment() 
+est ensuite appelée pour incrémenter les valeurs dans le tableau "tab". Ce processus est répété jusqu'à ce que les valeurs 
+dans "tab" aient atteint leur maximum possible (9 pour le dernier élément dans "tab" si nb est égal à 2, 8 pour 
+l'avant-dernier élément, etc.).
+
+En fin de compte, le programme imprimera toutes les combinaisons possibles de chiffres pour la longueur spécifiée, séparées 
+par des virgules et des espaces.
+*/
